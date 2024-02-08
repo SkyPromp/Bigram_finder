@@ -34,8 +34,7 @@ int main(){
         uint32_t* word = letters + i;
         char counter = 0;
         while(*word){
-            //printf("%d", *word & 1);  // print in binary
-            if((*word & 1) != 1) printf("%c", 'a' + counter);
+            if(*word & 1) printf("%c", 'a' + counter);
             *word >>= 1;
             counter++;
         }
